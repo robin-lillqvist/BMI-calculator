@@ -8,18 +8,22 @@ const calculateMetricBMI = (weight, height) => {
 
 const getBMIClassicifation = (value) => {
     console.log("getBMIClassicifation got value: " + value)
-
-    if (value < 18.5){
-        return "Underweight"
-    } else if(value < 25) {
-        return "Normal weight"
-    } else if(value < 30) {
-        return "Overweight"
-    } else if(value < 35) {
-        return "Obesity class 1"
-    } else if(value < 40.1) {
-        return "Obesity class 2"
+    if(value != null){
+        if (value < 18.5){
+            return "Underweight"
+        } else if(value < 25) {
+            return "Normal weight"
+        } else if(value < 30) {
+            return "Overweight"
+        } else if(value < 35) {
+            return "Obesity class 1"
+        } else if(value < 40.1) {
+            return "Obesity class 2"
+        } else {
+            return "Extreme Obesity class 3"
+        }
     } else {
-        return "Extreme Obesity class 3"
+        return "You need to enter valid parameters"
     }
+    
 }
