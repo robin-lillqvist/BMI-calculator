@@ -6,6 +6,6 @@ const calculateBMI = () => {
     let message = getBMIClassicifation(parseFloat(results))
 
     let displayResultsElement = document.getElementById('results')
-    displayResultsElement.innerHTML = `<h2>Your BMI value is: ${results} and you are deemed to be ${message}</h2>`
+    displayResultsElement.innerHTML = `<h2>Your BMI value is: ${results}. </br> You are deemed to be ${message}</h2>`
     displayResultsElement.classList.add('notification')
 } 
