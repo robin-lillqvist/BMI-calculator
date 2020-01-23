@@ -100,7 +100,7 @@ describe('Class3 Obese person check their BMI', () => {
     })
 
     it('It displays correct BMI for values w:136 h:184', () => {
-        cy.get('#results').should('contain', '35.44')    
+        cy.get('#results').should('contain', '40.17')    
     })
 
     it('It displays correct classification for values w:136 h:184', () => {
