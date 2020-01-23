@@ -1,0 +1,13 @@
+{
+  "name": "BMI-Calculator",
+  "version": "1.0.0",
+  "description": "School project for CraftAcademy ITP course",
+  "main": "index.js",
+  "repository": "https://github.com/robin-lillqvist/BMI-calculator.git",
+  "author": "<robin.lillqvist@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "cypress": "^3.8.2"
+  }
+}
