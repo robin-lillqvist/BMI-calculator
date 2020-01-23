@@ -54,7 +54,7 @@ describe('Underweight person check their BMI', () => {
     })
 })
 
-describe('Obese person check their BMI', () => {
+describe('Class 1 Obese person check their BMI', () => {
     it('user can ener eight and height', () => {
         cy.visit('http://localhost:3001')
         cy.contains('BMI Calculator')
@@ -67,8 +67,25 @@ describe('Obese person check their BMI', () => {
         cy.get('#results').should('contain', '32.49')    
     })
 
-    it('It displays correct classification for values w:60 h:184', () => {
+    it('It displays correct classification for values w:110 h:184', () => {
         cy.get('#results').should('contain', 'Obesity class 1')    
     })
 })
 
+describe('Class2 Obese person check their BMI', () => {
+    it('user can ener eight and height', () => {
+        cy.visit('http://localhost:3001')
+        cy.contains('BMI Calculator')
+        cy.get('#weight').type('120')
+        cy.get('#height').type('184')
+        cy.get('#Calculate').click()
+    })
+
+    it('It displays correct BMI for values w:120 h:184', () => {
+        cy.get('#results').should('contain', '32.49')    
+    })
+
+    it('It displays correct classification for values w:120 h:184', () => {
+        cy.get('#results').should('contain', 'Obesity class 2')    
+    })
+})
